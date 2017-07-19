@@ -3,7 +3,7 @@ package bigcache
 import (
 	"sync"
 
-	"github.com/allegro/bigcache/queue"
+	"github.com/ajaybodhe/bigcache/queue"
 )
 
 type cacheShard struct {

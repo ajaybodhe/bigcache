@@ -1,4 +1,4 @@
-# BigCache [![Build Status](https://travis-ci.org/allegro/bigcache.svg?branch=master)](https://travis-ci.org/allegro/bigcache)&nbsp;[![Coverage Status](https://coveralls.io/repos/github/allegro/bigcache/badge.svg?branch=master)](https://coveralls.io/github/allegro/bigcache?branch=master)&nbsp;[![GoDoc](https://godoc.org/github.com/allegro/bigcache?status.svg)](https://godoc.org/github.com/allegro/bigcache)&nbsp;[![Go Report Card](https://goreportcard.com/badge/github.com/allegro/bigcache)](https://goreportcard.com/report/github.com/allegro/bigcache)
+# BigCache [![Build Status](https://travis-ci.org/ajaybodhe/bigcache.svg?branch=master)](https://travis-ci.org/ajaybodhe/bigcache)&nbsp;[![Coverage Status](https://coveralls.io/repos/github/ajaybodhe/bigcache/badge.svg?branch=master)](https://coveralls.io/github/ajaybodhe/bigcache?branch=master)&nbsp;[![GoDoc](https://godoc.org/github.com/ajaybodhe/bigcache?status.svg)](https://godoc.org/github.com/ajaybodhe/bigcache)&nbsp;[![Go Report Card](https://goreportcard.com/badge/github.com/ajaybodhe/bigcache)](https://goreportcard.com/report/github.com/ajaybodhe/bigcache)
 
 Fast, concurrent, evicting in-memory cache written to keep big number of entries without impact on performance.
 BigCache keeps entries on heap but omits GC for them. To achieve that operations on bytes arrays take place,
@@ -9,7 +9,7 @@ therefore entries (de)serialization in front of the cache will be needed in most
 ### Simple initialization
 
 ```go
-import "github.com/allegro/bigcache"
+import "github.com/ajaybodhe/bigcache"
 
 cache, _ := bigcache.NewBigCache(bigcache.DefaultConfig(10 * time.Minute))
 
@@ -28,7 +28,7 @@ allocation can be avoided in that way.
 import (
 	"log"
 
-	"github.com/allegro/bigcache"
+	"github.com/ajaybodhe/bigcache"
 )
 
 config := bigcache.Config {
@@ -125,12 +125,12 @@ One of the advantage of bigcache over freecache is that you don’t need to know
 the size of the cache in advance, because when bigcache is full,
 it can allocate additional memory for new entries instead of
 overwriting existing ones as freecache does currently.
-However hard max size in bigcache also can be set, check [HardMaxCacheSize](https://godoc.org/github.com/allegro/bigcache#Config).
+However hard max size in bigcache also can be set, check [HardMaxCacheSize](https://godoc.org/github.com/ajaybodhe/bigcache#Config).
 
 
 ## More
 
-Bigcache genesis is described in allegro.tech blog post: [writing a very fast cache service in Go](http://allegro.tech/2016/03/writing-fast-cache-service-in-go.html)
+Bigcache genesis is described in ajaybodhe.tech blog post: [writing a very fast cache service in Go](http://ajaybodhe.tech/2016/03/writing-fast-cache-service-in-go.html)
 
 ## License
 
